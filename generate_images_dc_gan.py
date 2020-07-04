@@ -23,9 +23,9 @@ from scipy import misc
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('data_save_folder', type=str, default='data/cracked_glass',
-                    help='the input directory where the image to train on are stored')
-parser.add_argument('model_save_folder', type=str, default='models/dc_gan',
+parser.add_argument('data_save_path', type=str, default='data/cracked_glass',
+                    help='the output directory where the images generated will be stored')
+parser.add_argument('model_save_path', type=str, default='models/dc_gan',
                     help='the output directory where the models will be written')
 
 args = parser.parse_args()
@@ -38,8 +38,8 @@ random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 
 # Root directory for dataset
-data_save_folder = args.data_save_folder
-save_folder = args.model_save_folder
+data_save_folder = args.data_save_path
+save_folder = args.model_save_path
 if not os.path.exists(data_save_folder):
   os.makedirs(data_save_folder)
 if not os.path.exists(save_folder):
