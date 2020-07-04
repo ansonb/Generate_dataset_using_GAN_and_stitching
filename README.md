@@ -13,4 +13,4 @@ To generate the images run the below command </br>
 `python generate_images_dc_gan.py --data_save_path='path/to/training/images' --model_save_path='path/to/save/model'`
 
 To stitch the generated patches on images run </br>
-`python stitch_cracks.py --out_dir='path/to/save/images' --phone_dir='path/to/input/images' --crack_dir='path/to/input/patches' --out_csv_file_path='path/to/sabve/labels'`
+`python stitch_images.py --out_dir='path/to/save/images' --input_image_dir='path/to/input/images' --input_patch_dir='path/to/input/patches' --out_csv_file_path='path/to/save/labels'`
